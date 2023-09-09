@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INORIGINAL</title>
+    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="output.css">-->
+    <link rel="stylesheet" href="fontawesome-6.4.2/css/all.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<!--<header class=" bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">-->
+<!--    <div class="flex items-center justify-between">-->
+<!--    <h2 class="font-semibold text-slate-900">Projects</h2>-->
+<!--    <a href="/new" class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm">-->
+<!--        <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">-->
+<!--        <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />-->
+<!--        </svg>-->
+<!--        New-->
+<!--    </a>-->
+<!--    </div>-->
+<!--    <form class="group relative">-->
+<!--    <svg width="20" height="20" fill="currentColor" class="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500" aria-hidden="true">-->
+<!--        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />-->
+<!--    </svg>-->
+<!--    <input class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm" type="text" aria-label="Filter projects" placeholder="Filter projects...">-->
+<!--    </form>-->
+<!--</header>-->
+<!--<ul class="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6">-->
+<!--    <li x-for="project in projects">-->
+<!--    <a :href="project.url" class="hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 ring-1 ring-slate-200 shadow-sm">-->
+<!--        <dl class="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">-->
+<!--        <div>-->
+<!--            <dt class="sr-only">Title</dt>-->
+<!--            <dd class="group-hover:text-white font-semibold text-slate-900">-->
+<!--            {project.title}-->
+<!--            </dd>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <dt class="sr-only">Category</dt>-->
+<!--            <dd class="group-hover:text-blue-200">{project.category}</dd>-->
+<!--        </div>-->
+<!--        <div class="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">-->
+<!--            <dt class="sr-only">Users</dt>-->
+<!--            <dd x-for="user in project.users" class="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">-->
+<!--            <img :src="user.avatar" :alt="user.name" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">-->
+<!--            </dd>-->
+<!--        </div>-->
+<!--        </dl>-->
+<!--    </a>-->
+<!--    </li>-->
+<!--    <li class="flex shadow-md">-->
+<!--    <a href="/new" class="hover:border-blue-500 hover:border-solid hover:bg-white hover:text-blue-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed border-slate-300 text-sm leading-6 text-slate-900 font-medium py-3">-->
+<!--        <svg class="group-hover:text-blue-500 mb-1 text-slate-400" width="20" height="20" fill="currentColor" aria-hidden="true">-->
+<!--        <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />-->
+<!--        </svg>-->
+<!--        New project-->
+<!--    </a>-->
+<!--    </li>-->
+<!--</ul>-->
+
+<header class="flex h-fit items-center content-between w-full p-8 pl-20 pb-10 justify-between bg-[#1a1d29]">
+    <div class="logo w-fit">
+        <h1 class="color">INORIGINAL</h1>
+    </div>
+    <nav class="header__nav">
+        <a class="header__nav__link header__nav__link_active" href="#">Фильмы</a>
+        <a class="header__nav__link" href="#">Сериалы</a>
+        <a class="header__nav__link" href="#">Студии</a>
+        <a class="header__nav__link" href="#">Коллекции</a>
+    </nav>
+    <div class="header__search">
+        <svg class="icon icon_small icon_color_grey icon_hover_white" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M796-121 533-384q-30 26-69.959 40.5T378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z"/></svg>
+    </div>
+    <!-- TODO: Save filters in cookies -->
+    <!-- TODO: Create cursor for TV -->
+    <!-- TODO: Create resizer for films-list -->
+</header>
+<body>
+    <div class="wrapper">
+        <div class="filters filters_margin-1em">
+            <div class="filter">
+                <svg class="filter__icon" fill="#8d8e94" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z"/><path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/><path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z"/><path d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"/><path d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"/><path d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"/><path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z"/><path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                <select class="filter__dropdown">
+                    <option class="option">Год</option>
+                    <option class="option">2023</option>
+                    <option class="option">2022</option>
+                    <option class="option">2021</option>
+                    <option class="option">2020</option>
+                </select>
+                <i class="filter__icon filter__icon_right fa-solid fa-caret-down"></i>
+            </div>
+            <div class="filter">
+                <svg class="filter__icon" fill="#8d8e94" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z"/><path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/><path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z"/><path d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"/><path d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"/><path d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"/><path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z"/><path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                <select class="filter__dropdown">
+                    <option class="option">Жанры</option>
+                    <option class="option">аниме</option>
+                    <option class="option">биографический</option>
+                    <option class="option">боевик</option>
+                    <option class="option">вестерн</option>
+                    <option class="option">военный</option>
+                    <option class="option">детектив</option>
+                    <option class="option">детский</option>
+                    <option class="option">документальный</option>
+                    <option class="option">драма</option>
+                    <option class="option">исторический</option>
+                    <option class="option">кинокомикс</option>
+                    <option class="option">комедия</option>
+                    <option class="option">концерт</option>
+                    <option class="option">короткометражный</option>
+                    <option class="option">криминал</option>
+                    <option class="option">мелодрама</option>
+                    <option class="option">мистика</option>
+                    <option class="option">музыка</option>
+                    <option class="option">мультфильм</option>
+                    <option class="option">мюзикл</option>
+                    <option class="option">научный</option>
+                    <option class="option">нуар</option>
+                    <option class="option">приключения</option>
+                    <option class="option">реалити-шоу</option>
+                    <option class="option">семейный</option>
+                    <option class="option">спорт</option>
+                    <option class="option">ток-шоу</option>
+                    <option class="option">триллер</option>
+                    <option class="option">ужасы</option>
+                    <option class="option">фантастика</option>
+                    <option class="option">фэнтези</option>
+                    <option class="option">эротика</option>
+                </select>
+                <i class="filter__icon filter__icon_right fa-solid fa-caret-down"></i>
+
+            </div>
+            <div class="filter">
+                <svg class="filter__icon" fill="#8d8e94" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z"/><path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/><path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z"/><path d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"/><path d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"/><path d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"/><path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z"/><path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                <select class="filter__dropdown">
+                    <option class="option">Страна</option>
+                </select>
+                <i class="filter__icon filter__icon_right fa-solid fa-caret-down"></i>
+            </div>
+            <div class="filter">
+                <svg class="filter__icon" fill="#8d8e94" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z"/><path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/><path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z"/><path d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"/><path d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"/><path d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"/><path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z"/><path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                <select class="filter__dropdown">
+                    <option class="option">Рейтинг</option>
+                </select>
+                <i class="filter__icon filter__icon_right fa-solid fa-caret-down"></i>
+            </div>
+            <div class="filter">
+                <svg class="filter__icon" fill="#8d8e94" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z"/><path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/><path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z"/><path d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"/><path d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"/><path d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"/><path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z"/><path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                <select class="filter__dropdown">
+                    <option class="option">Студия</option>
+                </select>
+                <i class="filter__icon filter__icon_right fa-solid fa-caret-down"></i>
+            </div>
+            <div class="filter">
+                <svg class="filter__icon" fill="#8d8e94" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z"/><path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/><path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z"/><path d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"/><path d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"/><path d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"/><path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z"/><path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                <select class="filter__dropdown">
+                    <option class="option">Сначала новые</option>
+                </select>
+                <i class="filter__icon filter__icon_right fa-solid fa-caret-down"></i>
+            </div>
+
+
+        </div>
+        <!--    <div class="slider">-->
+        <!--        <button class="slider__button prev underscore" onclick="previousSlide()">&lt;</button>-->
+        <!--        <img src="demo/images/1.jpg" class="slider__image" alt="">-->
+        <!--        <button class="slider__button next underscore" onclick="nextSlide()">&gt;</button>-->
+        <!--    </div>-->
+        <section class="films-list">
+            <article class="film-card shadow-2xl">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+            <article class="film-card">
+                <img alt="Постер фильма Спилберг" class="poster-mini" src="images/poster.webp">
+                <div class="film-card__badge">
+                    <p>2023</p>
+                    <div class="film-card__badge__rating">
+                        <i class="film-card__badge__rating__icon fa-sharp fa-solid fa-chart-simple"></i>
+                        <p class="film-card__badge__rating__rate">8.9</p>
+                    </div>
+
+                </div>
+                <p class="film-card__film-name">Спилберг</p>
+            </article>
+        </section>
+    </div>
+</body>
+<footer class="footer class="h-full w-full"">
+    <h1>INORIGINAL -  open-source movie catalog</h1>
+</footer>
+<div class="overlay overlay_shadowed">
+    <div class="overlay__search">
+
+    </div>
+    <div class="overlay__film">
+        <svg class="overlay__film__close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101"><path d="M83.9 17.1c-.9-.9-2.5-.9-3.4 0l-30 30-30-30c-.9-.9-2.5-.9-3.4 0s-.9 2.5 0 3.4l30 30-30 30c-.9.9-.9 2.5 0 3.4.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7l30-30 30 30c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4l-30-30 30-30c.9-.9.9-2.4 0-3.4z"></path></svg>
+        <div class="overlay__film__content">
+            <div class="overlay__film__content__row">
+                <div class="film-info">
+                    <h1 class="film-card__film-name film-card__film-name_narrow">Человек-паук: Паутина вселенных (2023)</h1>
+                    <div class="film-table">
+                        <div class="film-table__row">
+                            <span class="film-table__col">Рейтинг</span>
+                            <span class="film-table__col">8.0 6.5</span>
+                            <span class="film-table__col">Название</span>
+                            <span class="film-table__col">Spider-Man: Across the Spider-Verse</span>
+                        </div>
+                        <div class="film-table__row">
+                            <span class="film-table__col">Год</span>
+                            <span class="film-table__col">2023</span>
+                            <span class="film-table__col">Жанры</span>
+                            <span class="film-table__col">мультфильм, приключения, фэнтези, боевик, фантастика</span>
+                        </div>
+                        <div class="film-table__row">
+                            <span class="film-table__col">Страна</span>
+                            <span class="film-table__col">США</span>
+                            <span class="film-table__col">Режиссёр</span>
+                            <span class="film-table__col">Хоаким Дос Сантос, Kemp Powers, Джастин Томпсон</span>
+                        </div>
+                        <div class="film-table__row">
+                            <span class="film-table__col">Сценарий</span>
+                            <span class="film-table__col">Фил Лорд, Кристофер Миллер, Дэйв Каллахэм</span>
+                            <span class="film-table__col">Актёры</span>
+                            <span class="film-table__col">Шамеик Мур, Хейли Стайнфелд, Брайан Тайри Генри, Лорен Луна Велес, Джейк Джонсон, Оскар Айзек, Джейсон Шварцман, Иса Рэй, Дэниэл Калуя, Каран Сони</span>
+                        </div>
+                        <div class="film-table__row">
+                            <span class="film-table__col">Длительность</span>
+                            <span class="film-table__col">2ч 21м</span>
+                            <span class="film-table__col">Премьера</span>
+                            <span class="film-table__col">31 мая 2023</span>
+                        </div>
+                    </div>
+
+                </div>
+                <img class="poster-full" src="images/poster2.jpg">
+            </div>
+            <div class="overlay__film__content__row">
+                <p>
+                    После воссоединения с Гвен Стейси дружелюбный сосед Человек-Паук попадает из Бруклина в Мультивселенную, где встречает команду Паучков, защищающих само её существование. Пытаясь справиться с новой угрозой, Майлз сталкивается с Пауками из других вселенных. Настаёт момент, когда ему необходимо решить, что значит быть героем, спасающим тех, кого любишь больше всего.
+                </p>
+            </div>
+            <div class="overlay__film__content__row title">
+                <h1 class="">Трейлер</h1>
+            </div>
+            <div class="overlay__film__content__row title">
+                <iframe class="iframe-youtube" src="https://www.youtube.com/embed/RE1vNn7tvX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+
+        </div>
+    </div>
+    
+
+</div>
+<script type="module" src="script.js"></script>
+<script type="module" src="overlay.js"></script>
+<!--<a href="https://iconscout.com/icons/cross" target="_blank">Free Cross Icon</a> by <a href="https://iconscout.com/contributors/lucia-gonzalez" target="_blank">Lucía González</a>-->
+</html>
